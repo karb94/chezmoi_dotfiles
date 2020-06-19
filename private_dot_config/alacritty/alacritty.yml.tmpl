@@ -93,11 +93,11 @@ font:
   normal:
     family: FiraCode Nerd Font Mono
     # family: Fira Code
-    style: Retina
+    style: Medium
   bold:
     family: FiraCode Nerd Font Mono
     # family: Fira Code
-    style: Medium
+    style: Bold
   italic:
     family: FiraCode Nerd Font Mono
     # family: Fira Code
@@ -110,7 +110,7 @@ font:
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
-{{- if eq .chezmoi.os "archlinux"}}
+{{- if eq .chezmoi.hostname "arch-desktop"}}
     x: -1
     y: 4
 {{- else if eq .chezmoi.os "darwin"}}
