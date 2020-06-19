@@ -89,7 +89,7 @@ window:
 
 # Font configuration
 font:
-  size: 16.0
+  #size: {{ .terminal_font_size }}
   normal:
     family: FiraCode Nerd Font Mono
     # family: Fira Code
@@ -110,8 +110,13 @@ font:
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
+{{- if eq .chezmoi.os "archlinux"}}
     x: -1
-    y: 3
+    y: 4
+{{- else if eq .chezmoi.os "darwin"}}
+    x: -1
+    y: 4
+{{- end }}
     # |
     # |
   # Glyph offset determines the locations of the glyphs within their cells with
